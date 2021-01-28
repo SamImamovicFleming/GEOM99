@@ -6,10 +6,6 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5a1FoKmbmQ1djPh6pRx7oiknBf3ACNOE&callback=initMap&libraries=&v=weekly"
       defer
     ></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5a1FoKmbmQ1djPh6pRx7oiknBf3ACNOE&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
     <style type="text/css">
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -39,7 +35,7 @@
       let map;
 
       function initMap() {
-        map = new google.maps.Map(document.getElementById("map1"), {
+        map1 = new google.maps.Map(document.getElementById("map1"), {
           center: { lat: 43.65397886935484, lng: -79.39049531284653 },
           zoom: 18,
         });
