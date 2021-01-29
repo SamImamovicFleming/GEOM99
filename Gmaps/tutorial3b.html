@@ -11,7 +11,8 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 100%;
+        height: 600px;
+        width: 100%;
       }
 
       /* Optional: Makes the sample page fill the window. */
@@ -28,7 +29,7 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
           zoom: 2,
-          center: { lat: -33.865427, lng: 151.196123 },
+          center: { lat: 59.959589430101126, lng: -112.1230283898644 },
           mapTypeId: "terrain",
         });
         // Create a <script> tag and set the USGS URL as the source.
@@ -52,7 +53,7 @@
           fillColor: "red",
           fillOpacity: 0.2,
           scale: Math.pow(2, magnitude) / 2,
-          strokeColor: "white",
+          strokeColor: "black",
           strokeWeight: 0.5,
         };
       }
@@ -63,6 +64,8 @@
     </script>
   </head>
   <body>
+    <h1> Tutorial 3b </h1>
     <div id="map"></div>
+    <p>  This map shows real-time earthquake data from the United States Geological Survey (USGS), where the larger the circle the bigger the earthquake. </p>
   </body>
 </html>
