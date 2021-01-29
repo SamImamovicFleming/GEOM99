@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5a1FoKmbmQ1djPh6pRx7oiknBf3ACNOE&callback=initMap&libraries=&v=weekly"
       defer
@@ -25,7 +27,7 @@
       function initMap() {
         const map = new google.maps.Map(document.getElementById("map"), {
           zoom: 3,
-          center: { lat:  60.48338579138651, lng:  -113.00193091773721 },
+          center: { lat: 51.48507765724331, lng: -86.41159384767181 },
         });
         // Create an array of alphabetical characters used to label the markers.
         const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
