@@ -130,7 +130,7 @@
     function LoadMap() {
         var mapOptions = {
             center: center,
-            zoom: 5,
+            zoom: 6,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -156,7 +156,18 @@
                 });
             })(marker, data);
         }
-    }
+      const route = [
+          { lat: 42.38024989509817, lng: -83.0468296319918 },
+          { lat: 43.000039345916264, lng: -81.25137568442734 },
+        ];
+        const trainPath = new google.maps.Polyline({
+          path: route,
+          geodesic: true,
+          strokeColor: "#FF0000",
+          strokeOpacity: 1.0,
+          strokeWeight: 2,
+        });
+        trainPath.setMap(map);}
 </script>
     </script>
   </head>
