@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5a1FoKmbmQ1djPh6pRx7oiknBf3ACNOE&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 400px;
+        width 100%;
+      }
 
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: { lat: 51.48507765724331, lng: -86.41159384767181 },
+        });
+        // Create an array of alphabetical characters used to label the markers.
+        const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        // Add some markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "locations" array.
+        // The map() method here has nothing to do with the Google Maps API.
+        const markers = locations.map((location, i) => {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length],
+          });
+        });
+        // Add a marker clusterer to manage the markers.
+        new MarkerClusterer(map, markers, {
+          imagePath:
+            "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+        });
+      }
+      const locations = [
+        { lat: 49.758123, lng: -92.65349 },
+        { lat: 45.442046 , lng: -78.820583 },
+        { lat: 48.17812017, lng: -90.22694426 },
+        { lat: 45.3915, lng: -79.214 },
+        { lat: 44.843699, lng: -80.002699 },
+        { lat: 44.62555, lng: -78.85738 },
+        { lat: 44.601, lng: -79.4829 },
+        { lat: 46.944168, lng: -84.551017 },
+        { lat: 47.352455, lng: -81.997528 },
+        { lat: 49.904122, lng: -93.469178 },
+        { lat: 44.8972, lng: -77.2095 },
+        { lat: 45.65729, lng: -77.57886 },
+        { lat: 43.40684, lng: -79.76889 },
+        { lat: 49.068974, lng: -93.904116 },
+        { lat: 44.50176, lng: -76.04133 },
+        { lat: 46.217628, lng: -82.070231 },
+        { lat: 44.53622, lng: -80.34897 },
+        { lat: 43.8755, lng: -78.777834 },
+        { lat: 46.18, lng: -77.84 },
+        { lat: 44.150159, lng: -79.898905 },
+        { lat: 44.340451, lng: -78.53435 },
+        { lat: 48.281932, lng: -79.872539 },
+        { lat: 46.47, lng: -81.44 },
+        { lat: 44.2908, lng: -77.7858 },
+        { lat: 47.054987, lng: -79.804448 },
+        { lat: 45.482113, lng: -76.213731 },   
+      ];
+    </script>
+  </head>
+  <body>
+    <h1> Proposed High-speed Rail Network in Windsor_Quebec City Corridor </h1>
+    
+    <h2> High-speed Rail Netowrk Overview </h2>
+    
+    <p> The network would span around 1200km, making it the longest highspeed rail network in North America once completed. The network would take 15 years to fully construct and cost about $12.8 million CAD (2009) per kilometer, which is on the low end of cost per kilometer when compared to other international highspeed rail projects. The reason for this is most of the land along the route is suitable for construction and there is no need to bore tunnels. Once the network is fully operational it is projected to attract 11.1 million passengers and generate $1.3 billion CAD (2009) in revenue. </p>
+    
+    <div id="map"></div>
+    
+    <p> This map demostrates the marker clustering ability of google maps, used a list of Ontario Provincial Parks. I only included the first 26 entires in the list. </p>
+  </body>
+</html>
