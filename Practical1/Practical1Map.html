@@ -22,6 +22,7 @@
         height: 100%;
         margin: 5px;
         padding: 5px;
+        background-color: green;
       }
       
       h1 {
@@ -53,7 +54,7 @@
             zoom: 6,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
  
         //Create and open InfoWindow.
         var infoWindow = new google.maps.InfoWindow();
