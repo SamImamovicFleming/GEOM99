@@ -123,12 +123,13 @@
         "description": 'A completely new station would be built in Windsor. In addition, the network could be extended to include Detroit within the network.'
     }
     ];
+  const center = { lat: 44.43398860797191, lng: -76.59405303811519 };
     window.onload = function () {
         LoadMap();
     }
     function LoadMap() {
         var mapOptions = {
-            center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
+            center: center,
             zoom: 5,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
