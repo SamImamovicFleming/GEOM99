@@ -34,52 +34,50 @@
           zoom: 6,
           center: { lat: 44.33240747186105, lng: -76.46633784597427 },
         }); 
-        // Create an array of alphabetical characters used to label the markers.
-        const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        // Add some markers to the map.
-        // Note: The code uses the JavaScript Array.prototype.map() method to
-        // create an array of markers based on a given "locations" array.
-        // The map() method here has nothing to do with the Google Maps API.
-        const markers = locations.map((location, i) => {
-          return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length],
-          });
-        });
-        // Add a marker clusterer to manage the markers.
-        new MarkerClusterer(map, markers, {
-          imagePath:
-            "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-        });
-      }
-      const locations = [
-        { lat: 49.758123, lng: -92.65349 },
-        { lat: 45.442046 , lng: -78.820583 },
-        { lat: 48.17812017, lng: -90.22694426 },
-        { lat: 45.3915, lng: -79.214 },
-        { lat: 44.843699, lng: -80.002699 },
-        { lat: 44.62555, lng: -78.85738 },
-        { lat: 44.601, lng: -79.4829 },
-        { lat: 46.944168, lng: -84.551017 },
-        { lat: 47.352455, lng: -81.997528 },
-        { lat: 49.904122, lng: -93.469178 },
-        { lat: 44.8972, lng: -77.2095 },
-        { lat: 45.65729, lng: -77.57886 },
-        { lat: 43.40684, lng: -79.76889 },
-        { lat: 49.068974, lng: -93.904116 },
-        { lat: 44.50176, lng: -76.04133 },
-        { lat: 46.217628, lng: -82.070231 },
-        { lat: 44.53622, lng: -80.34897 },
-        { lat: 43.8755, lng: -78.777834 },
-        { lat: 46.18, lng: -77.84 },
-        { lat: 44.150159, lng: -79.898905 },
-        { lat: 44.340451, lng: -78.53435 },
-        { lat: 48.281932, lng: -79.872539 },
-        { lat: 46.47, lng: -81.44 },
-        { lat: 44.2908, lng: -77.7858 },
-        { lat: 47.054987, lng: -79.804448 },
-        { lat: 45.482113, lng: -76.213731 },   
-      ];
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+    var markers = [
+    {
+        "title": 'Union Station',
+        "lat": '43.64545166130368',
+        "lng": '-79.38010579514894',
+        "description": 'Aksa Beach is a popular beach and a vacation spot in Aksa village at Malad, Mumbai.'
+    },
+    ];
+    window.onload = function () {
+        LoadMap();
+    }
+    function LoadMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
+            zoom: 6,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+ 
+        //Create and open InfoWindow.
+        var infoWindow = new google.maps.InfoWindow();
+ 
+        for (var i = 0; i < markers.length; i++) {
+            var data = markers[i];
+            var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: data.title
+            });
+ 
+            //Attach click event to the marker.
+            (function (marker, data) {
+                google.maps.event.addListener(marker, "click", function (e) {
+                    //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                    infoWindow.setContent("<div style = 'width:200px;min-height:40px'>" + data.description + "</div>");
+                    infoWindow.open(map, marker);
+                });
+            })(marker, data);
+        }
+    }
+</script>
     </script>
   </head>
   <body>
