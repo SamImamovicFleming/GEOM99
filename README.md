@@ -28,4 +28,42 @@ url: https://samimamovicfleming.github.io/GEOM99/Google_Maps_as_a_Development_Pl
 
 code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Google_Maps_as_a_Development_Platform/PlacesAPI.html
 
+### Google JavaScript API 
 
+Tutorial 1: 
+
+url: https://samimamovicfleming.github.io/GEOM99/Gmaps/tutorial1.html
+
+code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Gmaps/tutorial1.html
+
+Tutorial 2: 
+
+url: https://samimamovicfleming.github.io/GEOM99/Gmaps/tutorial2.html
+
+code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Gmaps/tutorial2.html
+
+Tutorial 3: 
+
+1. Points 
+
+url: https://samimamovicfleming.github.io/GEOM99/Gmaps/tutorial3a.html
+
+code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Gmaps/tutorial3a.html
+
+2. Ciricles 
+
+url: https://samimamovicfleming.github.io/GEOM99/Gmaps/tutorial3b.html
+
+code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Gmaps/tutorial3b.html
+
+3. Heatmap 
+
+url: https://samimamovicfleming.github.io/GEOM99/Gmaps/tutorial3c.html
+
+code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Gmaps/tutorial3c.html
+
+### Pratical 1 Lab Map 
+
+url: https://samimamovicfleming.github.io/GEOM99/Practical1/Practical1Map.html
+
+code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Practical1/Practical1Map.html
