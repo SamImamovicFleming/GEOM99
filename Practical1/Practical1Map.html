@@ -200,6 +200,7 @@
   const markers = locations.map((location, i) => {
           return new google.maps.Marker({
             position: location,
+            label: markers[i % markers.length],
           });
         });
         // Add a marker clusterer to manage the markers.
