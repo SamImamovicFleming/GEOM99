@@ -62,7 +62,7 @@ url: https://samimamovicfleming.github.io/GEOM99/Gmaps/tutorial3c.html
 
 code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Gmaps/tutorial3c.html
 
-### Pratical 1 Lab Map 
+### Practical 1 Lab Map 
 
 url: https://samimamovicfleming.github.io/GEOM99/Practical1/Practical1Map.html
 
