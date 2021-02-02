@@ -5,8 +5,6 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5a1FoKmbmQ1djPh6pRx7oiknBf3ACNOE&callback=initMap&libraries=&v=weekly"
       defer
     ></script>
-     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <style type="text/css">
      
@@ -196,35 +194,6 @@
           strokeWeight: 3,
         });
         trainPath.setMap(map);};
-  
-  const markers = locations.map((location, i) => {
-          return new google.maps.Marker({
-            position: location,
-            label: markers[i % markers.length],
-          });
-        });
-        // Add a marker clusterer to manage the markers.
-        new MarkerClusterer(map, markers, {
-          imagePath:
-            "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-        });
-      }
-      const locations = [
-          { lat: 42.38024989509817, lng: -83.0468296319918 },
-          { lat: 43.000039345916264, lng: -81.25137568442734 },
-          { lat: 43.24946646614322, lng: -79.87688035314429 },
-          { lat: 43.53319373972114, lng: -79.58227434684568 },
-          { lat: 43.64545166130368, lng: -79.38010579514894 },
-          { lat: 43.87139588441316, lng: -78.88243126235032 },
-          { lat: 44.2847460034596, lng: -76.55010756255408 },
-          { lat: 45.416444791496794, lng: -75.65169361018249 },
-          { lat: 45.49713941710044, lng: -73.76224086932706 },
-          { lat: 45.50027389730394, lng: -73.56539972792477 },
-          { lat: 45.60441626489259, lng: -73.7122641497239 },
-          { lat: 46.35846533889508, lng: -72.5463595195603 },
-         { lat: 46.80298914140052, lng: -71.36645516130743 },
-         { lat: 46.81757679318178, lng: -71.21323985851102 },
-      ];
 </script>
     </script>
   </head>
