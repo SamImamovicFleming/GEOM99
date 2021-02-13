@@ -67,3 +67,6 @@ code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Gmaps/tutorial3c.ht
 url: https://samimamovicfleming.github.io/GEOM99/Practical1/Practical1Map.html
 
 code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Practical1/Practical1Map.html
+
+##Practical 2
+
