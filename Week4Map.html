@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>ArcGIS API for JavaScript Tutorials: Display a map</title>
 
-  <style>
-    html, body, #viewDiv {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100%;
-    }
-  </style>
-  <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
-  <script src="https://js.arcgis.com/4.18/"></script>
-  <script>
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
 
-  require([
-    "esri/config",
-    "esri/Map",
-    "esri/views/MapView",
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.18/"></script>
 
-    "esri/Graphic",
-    "esri/layers/GraphicsLayer"
+    <script>
+      require(["esri/config","esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) {
 
-    ], function(esriConfig,Map, MapView, Graphic, GraphicsLayer) {
+        esriConfig.apiKey = "AIzaSyA5a1FoKmbmQ1djPh6pRx7oiknBf3ACNOE";
 
-  esriConfig.apiKey = "AIzaSyA5a1FoKmbmQ1djPh6pRx7oiknBf3ACNOE";
+        const map = new Map({
+          basemap: "arcgis-topographic" // Basemap layer service
+        });
 
-  const map = new Map({
-    basemap: "OSM:Streets" //Basemap layer service
-  });
+        const view = new MapView({
+          map: map,
+          center: [44.187124901963124,  -78.44012099777227], // Longitude, latitude
+          zoom: 13, // Zoom level
+          container: "viewDiv" // Div element
+        });
 
-  const view = new MapView({
-    map: map,
-    center: [44.210753971858786,-78.42707473337084], //Longitude, latitude
-    zoom: 13,
-    container: "viewDiv"
- });
-</script>
-</head>
-<body>
-  <div id="viewDiv"></div>
-</body>
+      });
+    </script>
+
+  </head>
+  <body>
+    <h1> Tutorial 1: Display a Map </h1>
+    
+    <div id="viewDiv"></div>
+  </body>
 </html>
