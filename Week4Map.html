@@ -40,8 +40,28 @@
 
  const point = { //Create a point
     type: "point",
-    longitude: -78.16354444983948,
-    latitude: 44.35486499808448
+    longitude:  -78.32517006324277,
+    latitude: 44.30476494451238
+ };
+ const simpleMarkerSymbol = {
+    type: "simple-marker",
+    color: [226, 119, 40],  // Orange
+    outline: {
+        color: [255, 255, 255], // White
+        width: 1
+    }
+ };
+        
+ const pointGraphic = new Graphic({
+    geometry: point,
+    symbol: simpleMarkerSymbol
+ });
+ graphicsLayer.add(pointGraphic);
+      });
+       const point = { //Create a point
+    type: "point",
+    longitude: -79.40381588749169,
+    latitude: 43.655592369470924
  };
  const simpleMarkerSymbol = {
     type: "simple-marker",
