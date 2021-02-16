@@ -70,3 +70,14 @@ code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Practical1/Practica
 
 ## Practical 2
 
+### Tutorials 
+
+url: https://samimamovicfleming.github.io/GEOM99/Week3EsriTutorials.html
+
+### JSON and Importing Data into Webmaps
+
+url: https://fleming.maps.arcgis.com/home/item.html?id=519e4a10d63d4b5d92fd16c7e4029ab4
+
+
+
+
