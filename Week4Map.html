@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-
+    <title>ArcGIS API for JavaScript Tutorials: Display a map</title>
 
     <style>
       html,
@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
     <script src="https://js.arcgis.com/4.18/"></script>
-
+#AIzaSyA5a1FoKmbmQ1djPh6pRx7oiknBf3ACNOE
     <script>
       require(["esri/config","esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) {
 
@@ -30,7 +30,7 @@
 
         const view = new MapView({
           map: map,
-          center: [44.187124901963124,  -78.44012099777227], // Longitude, latitude
+          center: [-118.805, 34.027], // Longitude, latitude
           zoom: 13, // Zoom level
           container: "viewDiv" // Div element
         });
@@ -40,7 +40,7 @@
 
   </head>
   <body>
-    <h1> Where I have lived </h1>
+    <h1> Tutorial 1: Display a Map </h1>
     
     <div id="viewDiv"></div>
   </body>
