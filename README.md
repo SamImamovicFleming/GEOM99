@@ -92,6 +92,10 @@ url: https://samimamovicfleming.github.io/GEOM99/Week4Tutorial2.html
 
 code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Week4Tutorial2.html
 
+## Week 4 Map
 
+url: https://samimamovicfleming.github.io/GEOM99/Week4Map.html
+
+code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Week4Map.html
 
 
