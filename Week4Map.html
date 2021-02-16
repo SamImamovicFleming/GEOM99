@@ -36,46 +36,28 @@
         });
          const graphicsLayer = new GraphicsLayer();
  map.add(graphicsLayer);
+        
+        map.on("load", function() {
+         var s = new PictureMarkerSymbol('hat.png', 24, 24);
 
- const point = { //Create a point
-    type: "point",
-    longitude: -78.29416206091588,
-    latitude: 44.307311617047176
- };
- const simpleMarkerSymbol = {
-    type: "simple-marker",
-    color: [226, 119, 40],  // Orange
-    outline: {
-        color: [255, 255, 255], // White
-        width: 1
-    }
- };
+         var gl = new GraphicsLayer();
+         var p = new Point(-79.38733639530487,43.654598781919745);
+         var i = { Wydział: "Ekonomiczno-Socjologiczny", Adres: "Polskiej Organizacji Wojskowej 3/5, 90-255 Łódź", Telefon: "42 635 53 56", www: "http://www.eksoc.uni.lodz.pl/"};
+         var it = new InfoTemplate("Ekonomiczno-Socjologiczny");
+         var g = new Graphic(p, s, i).setInfoTemplate(it);
 
- const pointGraphic = new Graphic({
-    geometry: point,
-    symbol: simpleMarkerSymbol
+         gl.add(g);
+
+         var p2 = new Point(-78.32105878809125,44.302994723737406);
+         var i2 = { Wydział: "Zarządzania", Adres: "Jana Matejki 22/26, 90-237 Łódź", Telefon: "42 635 51 22", www: "http://www.wz.uni.lodz.pl/"};
+         var it2 = new InfoTemplate("Zarządzania");
+         var g2 = new Graphic(p2, s, i2).setInfoTemplate(it2);
+
+        gl.add(g2);
+
+ map.addLayer(gl);
+
  });
- graphicsLayer.add(pointGraphic);
-         const point = { //Create a point
-    type: "point",
-    longitude: -79.40518917850717,
-    latitude: 43.658573033486064
- };
- const simpleMarkerSymbol = {
-    type: "simple-marker",
-    color: [226, 119, 40],  // Orange
-    outline: {
-        color: [255, 255, 255], // White
-        width: 1
-    }
- };
-
- const pointGraphic = new Graphic({
-    geometry: point,
-    symbol: simpleMarkerSymbol
- });
- graphicsLayer.add(pointGraphic);
-         });
     </script>
 
   </head>
