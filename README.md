@@ -78,6 +78,9 @@ url: https://samimamovicfleming.github.io/GEOM99/Week3EsriTutorials.html
 
 url: https://fleming.maps.arcgis.com/home/item.html?id=519e4a10d63d4b5d92fd16c7e4029ab4
 
+## ArcGIS Online Developers: Create a new empty layer
+I could not host a empty layer because I don't have privileges to do that. It says to contact your account administrator to add the privilege, but I didn't notice this till to late.
+
 ### Tutorials for JavaScript API
 
 Tutorial 1: Display a map 
@@ -86,7 +89,7 @@ url: https://samimamovicfleming.github.io/GEOM99/Week4Tutorial1.html
 
 code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Week4Tutorial1.html
 
-Tutorial 2: Add a Point, Line, and Polyline1
+Tutorial 2: Add a Point, Line, and Polyline
 
 url: https://samimamovicfleming.github.io/GEOM99/Week4Tutorial2.html
 
