@@ -56,6 +56,25 @@
     symbol: simpleMarkerSymbol
  });
  graphicsLayer.add(pointGraphic);
+         const point = { //Create a point
+    type: "point",
+    longitude: -79.40518917850717,
+    latitude: 43.658573033486064
+ };
+ const simpleMarkerSymbol = {
+    type: "simple-marker",
+    color: [226, 119, 40],  // Orange
+    outline: {
+        color: [255, 255, 255], // White
+        width: 1
+    }
+ };
+
+ const pointGraphic = new Graphic({
+    geometry: point,
+    symbol: simpleMarkerSymbol
+ });
+ graphicsLayer.add(pointGraphic);
          });
     </script>
 
