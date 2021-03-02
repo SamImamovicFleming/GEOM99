@@ -19,17 +19,13 @@
 
   require([
     "esri/config",
-    "esri/Map",
     "esri/layer/MapImageLayer",
-    "esri/views/MapView",
 
     "esri/widgets/Search"
 
-  ], function(esriConfig, MapIMageLayer, Map, MapView, Search) {
+  ], function(esriConfig, MapIMageLayer, Search) {
 
   esriConfig.apiKey = "AAPKbbd8491fe75247039998d6c353020061wy6-3MmpO2664o-OXCIWKK9tp1vlRdwb0HWcJB-IcvQ-e4IwQ-MwWgCflE8ARuHp";
-
-    
     
      var layer = new MapImageLayer({
     url: "https://luna.flemingcollege.ca/arcgis/rest/services/simamoviCanada/MapServer/0"
