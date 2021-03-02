@@ -20,15 +20,24 @@
   require([
     "esri/config",
     "esri/Map",
+    "esri/layer/MapImageLayer",
     "esri/views/MapView",
 
     "esri/widgets/Search"
 
-  ], function(esriConfig,Map, MapView, Search) {
+  ], function(esriConfig, MapIMageLayer, Map, MapView, Search) {
 
   esriConfig.apiKey = "AAPKbbd8491fe75247039998d6c353020061wy6-3MmpO2664o-OXCIWKK9tp1vlRdwb0HWcJB-IcvQ-e4IwQ-MwWgCflE8ARuHp";
 
-  const map = new Map({
+    
+    
+     var layer = new MapImageLayer({
+    url: "https://luna.flemingcollege.ca/arcgis/rest/services/simamoviCanada/MapServer/0"
+  });
+  map.add(layer);  // adds the layer to the map
+});
+   
+ const map = new Map({
       basemap: "arcgis-navigation"
     });
 
