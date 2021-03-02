@@ -101,4 +101,22 @@ url: https://samimamovicfleming.github.io/GEOM99/Week4Map.html
 
 code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Week4Map.html
 
+## Practical 3 
+
+### Publish Canada Service to the Luna server
+
+REST endpoint: https://luna.flemingcollege.ca/arcgis/rest/services/simamoviCanada/MapServer
+
+### Adding ArcGIS Server (Luna) map services to ArcGIS Online
+
+map service: https://luna.flemingcollege.ca/arcgis/rest/services/simamoviCanada/MapServer/0
+
+item: https://fleming.maps.arcgis.com/home/item.html?id=034d6f1e008b4d95baad06f9902ce5e3
+
+ArcGIS Online WebMap: https://fleming.maps.arcgis.com/home/item.html?id=cd394a5cbc44476a93563bd736defae5
+
+
+
+
+
 
