@@ -21,9 +21,11 @@
     "esri/Map",
     "esri/views/MapView",
 
-    "esri/layers/FeatureLayer"
+    "esri/layers/FeatureLayer",
+    
+    "esri/widgets/Search"
 
-  ], function(esriConfig,Map, MapView, FeatureLayer) {
+  ], function(esriConfig,Map, MapView, FeatureLayer, Search) {
 
   esriConfig.apiKey = "AAPKbbd8491fe75247039998d6c353020061wy6-3MmpO2664o-OXCIWKK9tp1vlRdwb0HWcJB-IcvQ-e4IwQ-MwWgCflE8ARuHp";
 
@@ -46,6 +48,15 @@
 
     map.add(parksLayer, 0);
   });
+    
+      const search = new Search({  //Add Search widget
+      view: view
+    });
+
+    view.ui.add(search, "top-right"); //Add to the map
+
+  });
+    
 </script>
 
 </head>
