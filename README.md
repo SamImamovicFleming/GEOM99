@@ -119,6 +119,10 @@ item: https://fleming.maps.arcgis.com/home/item.html?id=034d6f1e008b4d95baad06f9
 
 ArcGIS Online WebMap: https://fleming.maps.arcgis.com/home/item.html?id=cd394a5cbc44476a93563bd736defae5
 
+### Create an application 
+
+url: https://samimamovicfleming.github.io/GEOM99/Week6App.html
+
 
 
 
