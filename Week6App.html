@@ -29,7 +29,13 @@
   esriConfig.apiKey = "AAPKbbd8491fe75247039998d6c353020061wy6-3MmpO2664o-OXCIWKK9tp1vlRdwb0HWcJB-IcvQ-e4IwQ-MwWgCflE8ARuHp";
 
   const map = new Map({
-      basemap: "arcgis-navigation"
+      require(["esri/layers/MapImageLayer"], function(MapImageLayer){
+  // points to the states layer in a service storing U.S. census data
+  var layer = new MapImageLayer({
+    url: "https://luna.flemingcollege.ca/arcgis/rest/services/simamoviCanada/MapServer/0"
+  });
+  map.add(layer);  // adds the layer to the map
+});
     });
 
   const view = new MapView({
