@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>ArcGIS API for JavaScript Tutorials: Search for an address</title>
+  <title>ArcGIS API for JavaScript Tutorials: Add a feature layer</title>
   <style>
     html, body, #viewDiv {
       padding: 0;
@@ -16,26 +16,36 @@
   <script src="https://js.arcgis.com/4.18/"></script>
 
   <script>
-
   require([
     "esri/config",
+    "esri/Map",
+    "esri/views/MapView",
 
+    "esri/layers/FeatureLayer"
 
-    "esri/widgets/Search"
-
-  ], function(esriConfig, Search) {
+  ], function(esriConfig,Map, MapView, FeatureLayer) {
 
   esriConfig.apiKey = "AAPKbbd8491fe75247039998d6c353020061wy6-3MmpO2664o-OXCIWKK9tp1vlRdwb0HWcJB-IcvQ-e4IwQ-MwWgCflE8ARuHp";
 
+  const map = new Map({
+    basemap: "arcgis-topographic"
+  });
 
-  const search = new Search({  //Add Search widget
-      view: view
-    });
+  const view = new MapView({
+    container: "viewDiv",
+    map: map,
+    center: [-118.80543,34.02700],
+    zoom: 13
+  });
 
-    view.ui.add(search, "top-right"); //Add to the map
+
+// Parks and open spaces (polygons)
+  const parksLayer = new FeatureLayer({
+    url: "https://luna.flemingcollege.ca/arcgis/rest/services/simamoviCanada/MapServer/0"
+  });
 
   });
-  </script>
+</script>
 
 </head>
 <body>
