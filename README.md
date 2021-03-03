@@ -103,6 +103,10 @@ code: https://github.com/SamImamovicFleming/GEOM99/blob/main/Week4Map.html
 
 ## Practical 3 
 
+### ESRI Tutorial: Introduction to the ArcGIS for Server REST API 
+
+url: https://samimamovicfleming.github.io/GEOM99/Practical3/ESRI_RestAPI_Tutorial.html
+
 ### Publish Canada Service to the Luna server
 
 REST endpoint: https://luna.flemingcollege.ca/arcgis/rest/services/simamoviCanada/MapServer
