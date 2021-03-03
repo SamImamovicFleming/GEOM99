@@ -1,50 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>ArcGIS API for JavaScript Tutorials: Search for an address</title>
-  <style>
-    html, body, #viewDiv {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100%;
-    }
-  </style>
-  <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
-  <script src="https://js.arcgis.com/4.18/"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Intro to MapImageLayer | Sample | ArcGIS API for JavaScript 4.18</title>
 
-  <script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.18/"></script>
 
-  require([
-    "esri/config",
-    "esri/layer/MapImageLayer",
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
 
-    "esri/widgets/Search"
+    <script>
+      require(["esri/Map", "esri/views/SceneView", "esri/layers/MapImageLayer"], function(
+        Map,
+        SceneView,
+        MapImageLayer
+      ) {
+        /*****************************************************************
+         * Create a MapImageLayer instance pointing to a Map Service
+         * containing data about pool permits in Southern California.
+         *****************************************************************/
+        var permitsLayer = new MapImageLayer({
+          portalItem: {
+            // autocasts as new PortalItem()
+            id: "cd394a5cbc44476a93563bd736defae5"
+          }
+        });
 
-  ], function(esriConfig, MapIMageLayer, Search) {
+        /*****************************************************************
+         * Add the layer to a map
+         *****************************************************************/
+        var map = new Map({
+          basemap: "dark-gray-vector",
+          layers: [permitsLayer]
+        });
 
-  esriConfig.apiKey = "AAPKbbd8491fe75247039998d6c353020061wy6-3MmpO2664o-OXCIWKK9tp1vlRdwb0HWcJB-IcvQ-e4IwQ-MwWgCflE8ARuHp";
-    
-     var layer = new MapImageLayer({
-    url: "https://luna.flemingcollege.ca/arcgis/rest/services/simamoviCanada/MapServer/0"
-  });
-  map.add(layer);  // adds the layer to the map
-});
-   
+        var view = new SceneView({
+          container: "viewDiv",
+          map: map
+        });
 
-  const search = new Search({  //Add Search widget
-      view: view
-    });
+        /*****************************************************************
+         * Animate to the layer's full extent when the layer loads.
+         *****************************************************************/
+        permitsLayer.when(function() {
+          view.goTo(permitsLayer.fullExtent)
+          .catch(function(error){
+              if (error.name != "AbortError"){
+                console.error(error);
+              }
+            });
+        });
+      });
+    </script>
+  </head>
 
-    view.ui.add(search, "top-right"); //Add to the map
-
-  });
-  </script>
-
-</head>
-<body>
-  <h1> Title </h1>
-</body>
+  <body>
+    <div id="viewDiv"></div>
+  </body>
 </html>
